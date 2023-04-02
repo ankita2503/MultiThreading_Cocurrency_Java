@@ -5,6 +5,7 @@ public class DaemonThreadEx {
         public void run() {
             while (true) {
                 System.out.println("Deamon Thread is Running");
+                System.out.println("ThreadPriority is " + Thread.currentThread().getPriority());
             }
         }
     }
@@ -13,6 +14,7 @@ public class DaemonThreadEx {
         @Override
         public void run() {
             System.out.println("NormalThread is Running");
+            System.out.println("ThreadPriority is " + Thread.currentThread().getPriority());
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
